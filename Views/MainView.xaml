@@ -1,0 +1,45 @@
+﻿<Window x:Class="ApplicationProperties.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApplicationProperties.Views"
+        xmlns:viewmodels="clr-namespace:ApplicationProperties.ViewModels"
+        xmlns:convert="clr-namespace:ApplicationProperties.Converters"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Title="{Binding Path=Title}"
+        Height="768"
+        Width="1024" WindowStartupLocation="CenterScreen">
+    <DockPanel LastChildFill="True">
+
+        <!-- Menu -->
+        <local:MainMenuView DockPanel.Dock="Top" Padding="2"/>
+
+        <!-- Toolbar -->
+        <local:MainToolbarView DockPanel.Dock="Top"/>
+
+        <!-- Statusbar -->
+        <StatusBar DockPanel.Dock="Bottom" Background="{x:Null}">
+            <StatusBarItem Margin="4" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Path=CurrentStatus, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" FontStyle="Italic"/>
+            </StatusBarItem>
+            <StatusBarItem Margin="32,4,4,4">
+                <TextBlock Text="{Binding Path=CryptoStatus, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+            </StatusBarItem>
+        </StatusBar>
+
+        <!-- Content -->
+        <local:ContentView/>
+
+    </DockPanel>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Path=OnLoadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</Window>

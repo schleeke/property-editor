@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="ApplicationProperties.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:local="clr-namespace:ApplicationProperties.Views"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d"
+             MaxWidth="800"
+             Height="600"
+             d:DesignHeight="600" d:DesignWidth="600" Loaded="UserControl_Loaded">
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="Window">
+            <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterOwner" />
+            <Setter Property="ResizeMode" Value="CanResize"/>
+            <Setter Property="ShowInTaskbar" Value="False"/>
+            <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+        </Style>
+    </prism:Dialog.WindowStyle>
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Bottom" IsCancel="True" IsDefault="True" Width="100" Margin="16" Padding="4">OK</Button>
+
+        <Border Padding="16,8" Margin="8" CornerRadius="8" BorderThickness="1">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </Border.BorderBrush>
+            <RichTextBox x:Name="AboutText" BorderThickness="0" ScrollViewer.CanContentScroll="True"/>
+        </Border>
+
+    </DockPanel>
+</UserControl>

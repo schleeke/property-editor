@@ -1,0 +1,1530 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApplicationProperties</name>
+    </assembly>
+    <members>
+        <member name="T:ApplicationProperties.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.App.CommandLineArguments">
+            <summary>
+            The command line arguments. Can be NULL.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.App.CreateShell">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.App.RegisterTypes(Prism.Ioc.IContainerRegistry)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Commands.DecryptCommand">
+            <summary>
+            Command for decrypting a value.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.DecryptCommand.#ctor(ApplicationProperties.Services.ICryptoService,ApplicationProperties.Services.IContentService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.DecryptCommand"/> class.
+            </summary>
+            <param name="crypto">The application's crypto service.</param>
+            <param name="content">The file's content.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.DecryptCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.DecryptCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.DecryptCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.AddArrayItemCommand">
+            <summary>
+            Command for editing the selected entries array values.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.AddArrayItemCommand.#ctor(Prism.Services.Dialogs.IDialogService,ApplicationProperties.Services.IContentService,Prism.Events.IEventAggregator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.AddArrayItemCommand"/> class.
+            </summary>
+        </member>
+        <member name="E:ApplicationProperties.Commands.AddArrayItemCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.AddArrayItemCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.AddArrayItemCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.EncryptCommand">
+            <summary>
+            Command for decrypting a value.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.EncryptCommand.#ctor(ApplicationProperties.Services.ICryptoService,ApplicationProperties.Services.IContentService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.EncryptCommand"/> class.
+            </summary>
+            <param name="content">The file's content.</param>
+            <param name="crypto">The application's crypto service.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.EncryptCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.EncryptCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.EncryptCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.ExitApplicationCommand">
+            <summary>
+            Exits the application.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ExitApplicationCommand.#ctor(ApplicationProperties.Services.IContentService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.ExitApplicationCommand"/> class.
+            </summary>
+            <param name="content">The file's content.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.ExitApplicationCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ExitApplicationCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ExitApplicationCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.LoadFileCommand">
+            <summary>
+            Shows a dialog for chosing the file to load.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.LoadFileCommand.#ctor(Prism.Events.IEventAggregator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.LoadFileCommand"/> class.
+            </summary>
+            <param name="events"></param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.LoadFileCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.LoadFileCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.LoadFileCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.RemoveArrayItemCommand">
+            <summary>
+            Removes an item from the array of the selected entry.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.RemoveArrayItemCommand.#ctor(ApplicationProperties.Services.IContentService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.RemoveArrayItemCommand"/> class.
+            </summary>
+            <param name="content">The file's content.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.RemoveArrayItemCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.RemoveArrayItemCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.RemoveArrayItemCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.SaveFileCommand">
+            <summary>
+            Command for saving the application propertiesfile.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.SaveFileCommand.#ctor(ApplicationProperties.Services.IContentService,ApplicationProperties.Services.IStatusService,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.SaveFileCommand"/> class.
+            </summary>
+            <param name="content">Service for accessing and monitoring the current file's content.</param>
+            <param name="appStatus">The application's status.</param>
+            <param name="config">The configuration/settings.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.SaveFileCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.SaveFileCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.SaveFileCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.SetCryptoPasswordCommand">
+            <summary>
+            Sets the crypto password.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.SetCryptoPasswordCommand.#ctor(Prism.Services.Dialogs.IDialogService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.SetCryptoPasswordCommand"/> class.
+            </summary>
+            <param name="dialogs">The application's dialog service.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.SetCryptoPasswordCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.SetCryptoPasswordCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.SetCryptoPasswordCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.ShowAboutCommand">
+            <summary>
+            Command for showing the about dialog.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ShowAboutCommand.#ctor(Prism.Services.Dialogs.IDialogService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.ShowAboutCommand"/> class.
+            </summary>
+            <param name="dialogs">The application's dialog service.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.ShowAboutCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ShowAboutCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ShowAboutCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.ShowSettingsCommand">
+            <summary>
+            Command for showing the settings dialog.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ShowSettingsCommand.#ctor(Prism.Services.Dialogs.IDialogService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.ShowSettingsCommand"/> class.
+            </summary>
+            <param name="dlg">The dialog service.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.ShowSettingsCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ShowSettingsCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ShowSettingsCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Commands.ToggleBooleanEntryCommand">
+            <summary>
+            Command for toggle the true/false value of the selected entry.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ToggleBooleanEntryCommand.#ctor(ApplicationProperties.Services.IContentService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Commands.ToggleBooleanEntryCommand"/> class.
+            </summary>
+            <param name="content">Service for accessing the files's content.</param>
+        </member>
+        <member name="E:ApplicationProperties.Commands.ToggleBooleanEntryCommand.CanExecuteChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ToggleBooleanEntryCommand.CanExecute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Commands.ToggleBooleanEntryCommand.Execute(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Converters.EntryTypeToTextConverter">
+            <summary>
+            Converts an <see cref="T:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum"/> to a text and vice versa.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Converters.EntryTypeToTextConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Converters.EntryTypeToTextConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Converters.NumberLargerZeroConverter">
+            <summary>
+            Converts an integer number to a boolean depending on its value.
+            Returns true if the number is greater than zero (0).
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Converters.NumberLargerZeroConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Converters.NumberLargerZeroConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter">
+            <summary>
+            Converts an <see cref="T:ApplicationProperties.Models.ApplicationPropertiesEntry"/> into its editor type value.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum">
+            <summary>
+            Specifies the type of editor to use for a value.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Unknown">
+            <summary>
+            Unknown edotor type.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Textbox">
+            <summary>
+            Use a textbox for editing.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Combobox">
+            <summary>
+            Use a Combobox for editing.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Array">
+            <summary>
+            Use the array editor for editing.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Number">
+            <summary>
+            Use the number picker for editing.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Boolean">
+            <summary>
+            Use the editor for boolean values.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.EditorTypeEnum.Jdbc">
+            <summary>
+            Use the editor for SQL connection strings.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Converters.ValueTypeToEditorTypeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Events.ArrayItemAddedEvent">
+            <summary>
+            Event for adding a new item to the selected array.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.ArrayItemAddedEventArgs">
+            <summary>
+            Arguments for the <see cref="T:ApplicationProperties.Events.ArrayItemAddedEvent"/>.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Events.ArrayItemAddedEventArgs.NewItem">
+            <summary>
+            The name/text of the new item.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.EntrySelectedEvent">
+            <summary>
+            Fired when a new entry is selected.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.EntrySelectedEventArgs">
+            <summary>
+            Argument for the <see cref="T:ApplicationProperties.Events.EntrySelectedEvent"/>.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Events.EntrySelectedEventArgs.SelectedEntry">
+            <summary>
+            The currently selected entry.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.FileChangedEvent">
+            <summary>
+            Fired when a value within the file changes.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.FileChangedEventArgs">
+            <summary>
+            Arguments for the <see cref="T:ApplicationProperties.Events.FileChangedEvent"/>.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.NewFileSelectedEvent">
+            <summary>
+            Event for signalling the selection of a new application.properties file.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.NewFileSelectedEventArgs">
+            <summary>
+            Event arguments for the <see cref="T:ApplicationProperties.Events.NewFileSelectedEvent"/>.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Events.NewFileSelectedEventArgs.FullName">
+            <summary>
+            The full name/path of the application.properties file.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Events.PasswordChangedEvent">
+            <summary>
+            Raised when the crypto password was changed.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.MainResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.MainResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.MainResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.MainResource.aboutRTF">
+             <summary>
+               Looks up a localized string similar to {\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1031{\fonttbl{\f0\fnil\fcharset0 Segoe UI;}{\f1\fnil Consolas;}{\f2\fnil\fcharset0 Consolas;}{\f3\fnil\fcharset2 Symbol;}}
+            {\colortbl ;\red0\green0\blue255;\red163\green21\blue21;\red255\green0\blue0;\red0\green0\blue0;\red0\green128\blue0;}
+            {\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+            \pard\sa200\sl276\slmult1\qc\b\f0\fs36\lang7 Welcome\fs32\par
+            \b0\fs22 Thank you for using the &quot;Spring Boot Application Properties Editor&quot;!\par
+            \par
+            The tool is open  [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="T:ApplicationProperties.Models.ApplicationPropertiesEntry">
+            <summary>
+            Represents an entry within an application properties file.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum">
+            <summary>
+            Defines an entries value type.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Unknown">
+            <summary>
+            Unknown type (default).
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Text">
+            <summary>
+            Text.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Number">
+            <summary>
+            An integer number.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Float">
+            <summary>
+            Point number value.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Boolean">
+            <summary>
+            A boolean (true/false) value.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Jdbc">
+            <summary>
+            URL for accessing an SQL server.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesEntry.#ctor(ApplicationProperties.Models.ApplicationPropertiesFile)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Models.ApplicationPropertiesEntry"/> class.
+            </summary>
+            <param name="parent">The parent file containing this entry.</param>
+            <exception cref="T:System.ArgumentNullException">thrown if the specified parent file is NULL.</exception>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.Identifier">
+            <summary>
+            The (unique) configuration entry identifier.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.Value">
+            <summary>
+            The configuration entry value.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.Comment">
+            <summary>
+            An (optional) comment for the configuration entry.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryType">
+            <summary>
+            The entries value type.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.IsArray">
+            <summary>
+            Indicates if the entry can have multiple values.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.IsEncrypted">
+            <summary>
+            Indicates if the entry is encrypted.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.ConnectionString">
+            <summary>
+            The JDBC connection string.
+            Only filled if <see cref="P:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryType"/> equals <see cref="F:ApplicationProperties.Models.ApplicationPropertiesEntry.EntryTypeEnum.Jdbc"/>.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.Group">
+            <summary>
+            The name of the group for this entry/setting.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.Defaults">
+            <summary>
+            A list of default/allowed values.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.File">
+            <summary>
+            A reference to the parent file of the entry.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesEntry.ArrayValues">
+            <summary>
+            The different values derived from the <see cref="P:ApplicationProperties.Models.ApplicationPropertiesEntry.Value"/> as an array.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesEntry.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Models.ApplicationPropertiesFile">
+            <summary>
+            Represents an application properties file.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesFile.#ctor(System.String,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Models.ApplicationPropertiesFile"/> class.
+            </summary>
+            <param name="path">The full path to the file.</param>
+            <param name="config">The configuration/settings.</param>
+            <exception cref="T:System.IO.FileNotFoundException">Thrown if the specified file was not found.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown if the given path is NULL.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if the given path is empty.</exception>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesFile.FullName">
+            <summary>
+            The full name/path of the application properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesFile.Entries">
+            <summary>
+            A list of all configuration entries within the application properties file.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesFile.Read">
+            <summary>
+            Reads the given application.properties file.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesFile.Save(System.String)">
+            <summary>
+            Saves the content to a file.
+            </summary>
+            <param name="fileName">The name of the file to save the content to.</param>
+        </member>
+        <member name="T:ApplicationProperties.Models.ApplicationPropertiesSchema">
+            <summary>
+            Represents a schema file for an application.properties file.
+            Defines the properties and their types.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesSchema.#ctor(System.String,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            The full path to the schema XML file.
+            </summary>
+            <param name="fullName">The full path to the XML file.</param>
+            <param name="config">The configuration/settings</param>
+        </member>
+        <member name="P:ApplicationProperties.Models.ApplicationPropertiesSchema.FullName">
+            <summary>
+            The full path to the schema XML file.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ApplicationPropertiesSchema.GetEntries">
+            <summary>
+            Returns the entry definitions within the schema file.
+            </summary>
+            <returns>A list of entry definitions.</returns>
+        </member>
+        <member name="T:ApplicationProperties.Models.ChangeTrackingBase">
+            <summary>
+            Base class for implementing change tracking.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.ChangeTrackingBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Models.ChangeTrackingBase"/> class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ChangeTrackingBase.TrackingActive">
+            <summary>
+            Indicates if property change tracking is active.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.ChangeTrackingBase.HasChanges">
+            <summary>
+            Indicates if properties have been changed.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Models.JdbcConnectionString">
+            <summary>
+            Represents a JDBC connection string.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.JdbcConnectionString.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Models.JdbcConnectionString"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.JdbcConnectionString.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Models.JdbcConnectionString"/> class.
+            </summary>
+            <param name="connectionString">The connection string</param>
+            <exception cref="T:System.FormatException">Thrown if the connection string has a bad format.</exception>
+        </member>
+        <member name="P:ApplicationProperties.Models.JdbcConnectionString.SqlServer">
+            <summary>
+            The name of the SQL server (instance).
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.JdbcConnectionString.Database">
+            <summary>
+            The name of the database.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Models.JdbcConnectionString.IntegratedSecurity">
+            <summary>
+            Indicates if the connection uses integrated security;
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Models.JdbcConnectionString.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Services.ContentService">
+            <summary>
+            Service for accessing the file's content.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.ContentService.#ctor(ApplicationProperties.Services.IStatusService,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Services.ContentService"/> class.
+            </summary>
+            <param name="status">The application's status.</param>
+            <param name="config">The configuration/settings.</param>
+        </member>
+        <member name="P:ApplicationProperties.Services.ContentService.SelectedEntry">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.ContentService.Entries">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.ContentService.HasChanges">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.ContentService.SetChanged(ApplicationProperties.Services.PropertyTypeEnum)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Services.IConfigurationService">
+            <summary>
+            Interface for accessing the application's configuration/settings.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IConfigurationService.CryptoBinariesDirectory">
+            <summary>
+            The directory that contains the binaries for the crypto operations.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IConfigurationService.UseSchemaFile">
+            <summary>
+            Flag for enabling/disabling the usage of schema files for the application.properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IConfigurationService.BackupOnSave">
+            <summary>
+            Controls the creation (true) of a backup file before saving/rewriting the application.properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IConfigurationService.ConfigurationFilePath">
+            <summary>
+            The full path to the file that contains the configuration/settings.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.IConfigurationService.Load">
+            <summary>
+            Loads the configuration/settings from the <see cref="P:ApplicationProperties.Services.IConfigurationService.ConfigurationFilePath"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApplicationProperties.Services.IConfigurationService.Save">
+            <summary>
+            Saves the configuration to the <see cref="P:ApplicationProperties.Services.IConfigurationService.ConfigurationFilePath"/>.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Services.PropertyTypeEnum">
+            <summary>
+            Field definitions for the <see cref="T:ApplicationProperties.Services.IContentService"/>.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Services.PropertyTypeEnum.Unknown">
+            <summary>
+            Unknown field.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Services.PropertyTypeEnum.SelectedEntry">
+            <summary>
+            The selected entry.
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Services.PropertyTypeEnum.Entries">
+            <summary>
+            The file's content.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Services.IContentService">
+            <summary>
+            Interface for accessing the content.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IContentService.SelectedEntry">
+            <summary>
+            The currently selected entry.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IContentService.Entries">
+            <summary>
+            The content.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IContentService.HasChanges">
+            <summary>
+            Indicates if the content has been changed.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.IContentService.SetChanged(ApplicationProperties.Services.PropertyTypeEnum)">
+            <summary>
+            Raises <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> for the specified property.
+            </summary>
+            <param name="property">The property to raise the change for.</param>
+        </member>
+        <member name="T:ApplicationProperties.Services.ICryptoService">
+            <summary>
+            Interface for doing crypto stuff.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.ICryptoService.IsReady">
+            <summary>
+            Indicates if the crypt module/service can be used.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.ICryptoService.Password">
+            <summary>
+            The password for the symmetric encryption.
+            Set by <see cref="M:ApplicationProperties.Services.ICryptoService.SetPassword(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.ICryptoService.SetPassword(System.String)">
+            <summary>
+            Sets the password.
+            </summary>
+            <param name="password"></param>
+        </member>
+        <member name="M:ApplicationProperties.Services.ICryptoService.SetPassword(System.Security.SecureString)">
+            <summary>
+            Sets the password.
+            </summary>
+            <param name="password"></param>
+        </member>
+        <member name="M:ApplicationProperties.Services.ICryptoService.Encrypt(System.String)">
+            <summary>
+            Encrypts a string with the <see cref="P:ApplicationProperties.Services.ICryptoService.Password"/>.
+            </summary>
+            <param name="plainText">The plain text string to encrypt.</param>
+            <returns>The cipher for the plain text.</returns>
+        </member>
+        <member name="M:ApplicationProperties.Services.ICryptoService.Decrypt(System.String)">
+            <summary>
+            Decrypts a cipher with the <see cref="P:ApplicationProperties.Services.ICryptoService.Password"/>.
+            </summary>
+            <param name="cipher">The cipher to decrypt.</param>
+            <returns>The decrypted plain text.</returns>
+        </member>
+        <member name="P:ApplicationProperties.Services.ICryptoService.Status">
+            <summary>
+            The crypto module status.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Services.IStatusService">
+            <summary>
+            Accessing the application's status.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.IStatusService.SetStatus(System.String)">
+            <summary>
+            Sets the application's current status and returns its id
+            for later removal if the reason for the state change is obsolete.
+            </summary>
+            <param name="message">
+            The message that describes the current status.
+            Will be displayed in the status bar.
+            </param>
+            <returns>The id of the status for later removal.</returns>
+        </member>
+        <member name="M:ApplicationProperties.Services.IStatusService.RemoveStatus(System.Guid)">
+            <summary>
+            Removes a status from the status list.
+            </summary>
+            <param name="id">The id that was returned from <see cref="M:ApplicationProperties.Services.IStatusService.SetStatus(System.String)"/>.</param>
+        </member>
+        <member name="P:ApplicationProperties.Services.IStatusService.ApplicationStatus">
+            <summary>
+            The application's current status.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.IStatusService.FilePath">
+            <summary>
+            The file path of the currently selected application.properties file.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Services.JasyptCryptoService">
+            <summary>
+            Jasypt-Implementation of the <see cref="T:ApplicationProperties.Services.ICryptoService"/> interface.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.JasyptCryptoService.#ctor(Prism.Events.IEventAggregator,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Services.JasyptCryptoService"/> class.
+            </summary>
+            <param name="events">The event bus.</param>
+            <param name="config">The configuration/settings.</param>
+        </member>
+        <member name="P:ApplicationProperties.Services.JasyptCryptoService.IsReady">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.JasyptCryptoService.Password">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.JasyptCryptoService.Status">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JasyptCryptoService.Decrypt(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JasyptCryptoService.Encrypt(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JasyptCryptoService.SetPassword(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JasyptCryptoService.SetPassword(System.Security.SecureString)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JasyptCryptoService.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Services.JsonConfigurationService">
+            <summary>
+            Implementation of the <see cref="T:ApplicationProperties.Services.IConfigurationService"/> using JSON for (de)serialization.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.JsonConfigurationService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Services.JsonConfigurationService"/> class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Services.JsonConfigurationService.CryptoBinariesDirectory">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.JsonConfigurationService.UseSchemaFile">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.JsonConfigurationService.BackupOnSave">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.JsonConfigurationService.ConfigurationFilePath">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JsonConfigurationService.Load">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.JsonConfigurationService.Save">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Services.StatusService">
+            <summary>
+            Implementation of <see cref="T:ApplicationProperties.Services.IStatusService"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Services.StatusService.#ctor(Prism.Events.IEventAggregator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Services.StatusService"/> class.
+            </summary>
+            <param name="events">The application's internal event bus (PubSub).</param>
+        </member>
+        <member name="P:ApplicationProperties.Services.StatusService.ApplicationStatus">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.StatusService.FilePath">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.Services.StatusService.SelectedEntry">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.StatusService.RemoveStatus(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.Services.StatusService.SetStatus(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.StringExtensions">
+            <summary>
+            Extension methods for strings.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.StringExtensions.Uncapsulate(System.String,System.String,System.String)">
+            <summary>
+            Removes characters that are encapsulating the string.
+            </summary>
+            <param name="s">The input string.</param>
+            <param name="start">The leading character/string.</param>
+            <param name="end">The trailing character/string.</param>
+            <returns>The input string without the leading start string and trailing end string.</returns>
+        </member>
+        <member name="M:ApplicationProperties.StringExtensions.Encapsultate(System.String,System.String,System.String)">
+            <summary>
+            Encapsulates the input string with leading and trailing characters/strings.
+            </summary>
+            <param name="s">The input string to encapsulate.</param>
+            <param name="start">The leading characters/string.</param>
+            <param name="end">The trailing characters/string.</param>
+            <returns>The encapsulated input string.</returns>
+        </member>
+        <member name="M:ApplicationProperties.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            Checks if a string is null or empty.
+            </summary>
+            <param name="s">The string to check.</param>
+            <returns>True if the string is null or empty.</returns>
+        </member>
+        <member name="M:ApplicationProperties.StringExtensions.IsEncapsulated(System.String,System.String,System.String)">
+            <summary>
+            Checks if a string is encapsulated.
+            </summary>
+            <param name="s">The input string.</param>
+            <param name="start">The leading string.</param>
+            <param name="end">The tailing string.</param>
+            <returns>True if the string is encapsulated.</returns>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.AboutViewModel">
+            <summary>
+            The view model for the <see cref="T:ApplicationProperties.Views.AboutView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AboutViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.AboutViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.AboutViewModel.Title">
+            <inheritdoc/>
+        </member>
+        <member name="E:ApplicationProperties.ViewModels.AboutViewModel.RequestClose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AboutViewModel.CanCloseDialog">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AboutViewModel.OnDialogClosed">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AboutViewModel.OnDialogOpened(Prism.Services.Dialogs.IDialogParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.AddArrayItemViewModel">
+            <summary>
+            The view model for the <see cref="T:ApplicationProperties.Views.AddArrayItemView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AddArrayItemViewModel.#ctor(Prism.Events.IEventAggregator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.AddArrayItemViewModel"/> class.
+            </summary>
+            <param name="events">The application's events.</param>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.AddArrayItemViewModel.Text">
+            <summary>
+            The new text/value for the array.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.AddArrayItemViewModel.CancelCommad">
+            <summary>
+            Command for canceling the dialog.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.AddArrayItemViewModel.SaveCommand">
+            <summary>
+            Command for saving the new array item.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.AddArrayItemViewModel.Title">
+            <inheritdoc/>
+        </member>
+        <member name="E:ApplicationProperties.ViewModels.AddArrayItemViewModel.RequestClose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AddArrayItemViewModel.CanCloseDialog">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AddArrayItemViewModel.OnDialogClosed">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.AddArrayItemViewModel.OnDialogOpened(Prism.Services.Dialogs.IDialogParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.ContentViewModel">
+            <summary>
+            View model for the <see cref="T:ApplicationProperties.Views.ContentView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.ContentViewModel.#ctor(ApplicationProperties.Services.IContentService,Prism.Services.Dialogs.IDialogService,Prism.Events.IEventAggregator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.ContentViewModel"/> class.
+            </summary>
+            <param name="content">The file's content.</param>
+            <param name="dialogs">The dialog service.</param>
+            <param name="events">The application's event bus.</param>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.ContentViewModel.Content">
+            <summary>
+            The file's content.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.ContentViewModel.ArrayItemToRemove">
+            <summary>
+            The array item to remove.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.ContentViewModel.ToggleBooleanCommand">
+            <summary>
+            Toggles the boolean value of the selected entry.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.ContentViewModel.AddArrayItemCommand">
+            <summary>
+            Shows a dialog for adding a new item to the array.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.ContentViewModel.RemoveArrayItemCommand">
+            <summary>
+            Removes an item from the array.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.MainMenuViewModel">
+            <summary>
+            The view model for the <see cref="T:ApplicationProperties.Views.MainMenuView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.MainMenuViewModel.#ctor(Prism.Events.IEventAggregator,ApplicationProperties.Services.IContentService,ApplicationProperties.Services.IStatusService,ApplicationProperties.Services.ICryptoService,Prism.Services.Dialogs.IDialogService,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.MainMenuViewModel"/> class.
+            </summary>
+            <param name="events">The application's event bus.</param>
+            <param name="content">The file's content.</param>
+            <param name="status">The application' status.</param>
+            <param name="crypto">The application's crypto service.</param>
+            <param name="dialogs">The dialog service.</param>
+            <param name="config">The configuration/settings service.</param>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.LoadFileCommand">
+            <summary>
+            Command for loading an application.properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.SaveFileCommand">
+            <summary>
+            Command for saving the currently loaded application.properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.ExitApplicationCommand">
+            <summary>
+            Command for exiting the application.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.EncryptValueCommand">
+            <summary>
+            Command for encrypting the currently selected value.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.DecryptValueCommand">
+            <summary>
+            Command for decrypting the currently selected value.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.SetPasswordCommand">
+            <summary>
+            Command for setting the crypto password.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.ShowPreferencesCommand">
+            <summary>
+            Command for showing the settings dialog.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainMenuViewModel.ShowAboutDialogCommand">
+            <summary>
+            Command for showing the application's about dialog.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.MainToolbarViewModel">
+            <summary>
+            The view model for the <see cref="T:ApplicationProperties.Views.MainToolbarView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.MainToolbarViewModel.#ctor(Prism.Events.IEventAggregator,ApplicationProperties.Services.IContentService,ApplicationProperties.Services.IStatusService,ApplicationProperties.Services.ICryptoService,Prism.Services.Dialogs.IDialogService,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.MainToolbarViewModel"/> class.
+            </summary>
+            <param name="events">The application's event bus.</param>
+            <param name="content">The file's content.</param>
+            <param name="status">The application' status.</param>
+            <param name="crypto">The application's crypto service.</param>
+            <param name="dialogs">The dialog service.</param>
+            <param name="config">The configuration/settings service.</param>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.LoadFileCommand">
+            <summary>
+            Command for loading an application.properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.SaveFileCommand">
+            <summary>
+            Command for saving the currently loaded application.properties file.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.ExitApplicationCommand">
+            <summary>
+            Command for exiting the application.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.EncryptValueCommand">
+            <summary>
+            Command for encrypting the currently selected value.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.DecryptValueCommand">
+            <summary>
+            Command for decrypting the currently selected value.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.SetPasswordCommand">
+            <summary>
+            Command for setting the crypto password.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.ShowPreferencesCommand">
+            <summary>
+            Command for showing the settings dialog.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.ShowAboutDialogCommand">
+            <summary>
+            Command for showing the application's about dialog.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainToolbarViewModel.Content">
+            <summary>
+            The file's content.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.MainViewModel">
+            <summary>
+            The view model for the <see cref="T:ApplicationProperties.Views.MainView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.MainViewModel.#ctor(ApplicationProperties.Services.IStatusService,ApplicationProperties.Services.ICryptoService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.MainViewModel"/> class.
+            </summary>
+            <param name="appStatus">The application status.</param>
+            <param name="crypto">The crypto service</param>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainViewModel.ApplicationStatus">
+            <summary>
+            The application's current status.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainViewModel.CurrentStatus">
+            <summary>
+            The current status of the application.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainViewModel.CryptoStatus">
+            <summary>
+            The status of the crypto service.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainViewModel.Title">
+            <summary>
+            The title of the application window.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.MainViewModel.OnLoadedCommand">
+            <summary>
+            Executerd when window is loaded.
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.SetPasswordViewModel">
+            <summary>
+            View model for the <see cref="T:ApplicationProperties.Views.SetPasswordView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SetPasswordViewModel.#ctor(Prism.Events.IEventAggregator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.SetPasswordViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SetPasswordViewModel.SaveCommand">
+            <summary>
+            Command for saving the new password.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SetPasswordViewModel.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SetPasswordViewModel.Password">
+            <summary>
+            The password.
+            </summary>
+        </member>
+        <member name="E:ApplicationProperties.ViewModels.SetPasswordViewModel.RequestClose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SetPasswordViewModel.CanCloseDialog">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SetPasswordViewModel.OnDialogClosed">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SetPasswordViewModel.OnDialogOpened(Prism.Services.Dialogs.IDialogParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.ViewModels.SettingsViewModel">
+            <summary>
+            The view model for the <see cref="T:ApplicationProperties.Views.SettingsView"/>.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SettingsViewModel.#ctor(Prism.Events.IEventAggregator,ApplicationProperties.Services.IConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.ViewModels.SettingsViewModel"/> class.
+            </summary>
+            <param name="events">The application's event bus.</param>
+            <param name="config">The configuration/settings.</param>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.JasyptDirectory">
+            <summary>
+            The jasypt directory. Used for crypto stuff.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.UseSchema">
+            <summary>
+            Indicates if the schema file should be used.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.CreateBackup">
+            <summary>
+            Indicates if a backup is created when the application.properties file is saved.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.CancelCommand">
+            <summary>
+            Command for closing the dialog.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.SaveCommand">
+            <summary>
+            Command for saving the settings.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.BrowseDirectoryCommand">
+            <summary>
+            Shows the directory browser dialog for the jasypt directory.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.SettingsViewModel.Title">
+            <inheritdoc/>
+        </member>
+        <member name="E:ApplicationProperties.ViewModels.SettingsViewModel.RequestClose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SettingsViewModel.CanCloseDialog">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SettingsViewModel.OnDialogClosed">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApplicationProperties.ViewModels.SettingsViewModel.OnDialogOpened(Prism.Services.Dialogs.IDialogParameters)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApplicationProperties.Views.AboutView">
+            <summary>
+            Interaction logic for AboutView.xaml
+            </summary>
+            <summary>
+            AboutView
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Views.AboutView.DIALOG_NAME">
+            <summary>
+            The name of the dialog.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.AboutView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.AboutView"/> clas.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.AboutView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.AddArrayItemView">
+            <summary>
+            Interaction logic for AddArrayItemView.xaml
+            </summary>
+            <summary>
+            AddArrayItemView
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Views.AddArrayItemView.DIALOG_NAME">
+            <summary>
+            The name of the dialog.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.AddArrayItemView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.AddArrayItemView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.AddArrayItemView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.ContentView">
+            <summary>
+            Interaction logic for ContentView.xaml
+            </summary>
+            <summary>
+            ContentView
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.ContentView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.ContentView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.ContentView.NumericTextBox_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Prevents entering alphabetical characters into a textbox.
+            </summary>
+            <param name="sender">The <see cref="T:System.Windows.Controls.TextBox"/> that fired the event.</param>
+            <param name="e">Event parameters.</param>
+        </member>
+        <member name="M:ApplicationProperties.Views.ContentView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.MainMenuView">
+            <summary>
+            Interaction logic for MainMenuView.xaml
+            </summary>
+            <summary>
+            MainMenuView
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainMenuView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.MainMenuView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainMenuView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.MainToolbarView">
+            <summary>
+            Interaction logic for MainToolbarView.xaml
+            </summary>
+            <summary>
+            MainToolbarView
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainToolbarView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.MainToolbarView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainToolbarView.ToolBar_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Hides the overflow grip.
+            </summary>
+            <param name="sender">The toolbar.</param>
+            <param name="e">Arguments.</param>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainToolbarView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.MainView">
+            <summary>
+            Interaction logic for MainView.xaml
+            </summary>
+            <summary>
+            MainView
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.MainView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.MainView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.SetPasswordView">
+            <summary>
+            Interaction logic for SetPasswordView.xaml
+            </summary>
+            <summary>
+            SetPasswordView
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Views.SetPasswordView.DIALOG_NAME">
+            <summary>
+            The name of the dialog.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.SetPasswordView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.SetPasswordView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.SetPasswordView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Views.SettingsView">
+            <summary>
+            Interaction logic for SettingsView.xaml
+            </summary>
+            <summary>
+            SettingsView
+            </summary>
+        </member>
+        <member name="F:ApplicationProperties.Views.SettingsView.DIALOG_NAME">
+            <summary>
+            The name of the dialog.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.SettingsView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApplicationProperties.Views.SettingsView"/> class.
+            </summary>
+        </member>
+        <member name="M:ApplicationProperties.Views.SettingsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:ApplicationProperties.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

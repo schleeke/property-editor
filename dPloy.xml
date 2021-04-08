@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationPropertiesSchema>
+  <Entry IsArray="false" ValueType="Number" Group="Server">server.port</Entry>
+  <Entry IsArray="false" ValueType="Boolean" Group="Server">server.http2.enabled</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Server">spring.profiles.active</Entry>
+  <Entry IsArray="false" ValueType="Text" Defaults="NATIVE,FRAMEWORK" Group="Server">server.forward-headers-strategy</Entry>
+  <Entry IsArray="false" ValueType="Boolean" Group="Logging">server.tomcat.accesslog.enabled</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Logging">server.tomcat.accesslog.directory</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Server">server.tomcat.basedir</Entry>
+  <Entry IsArray="false" ValueType="Boolean" Group="Logging">spring.http.log-request-details</Entry>
+  <Entry IsArray="true" ValueType="Text" Group="Server">web.cors-allowed-origins</Entry>
+  <Entry IsArray="false" ValueType="Text" Defaults="PKCS12,JKS" Group="Certificate">server.ssl.key-store-type</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Certificate">server.ssl.key-store</Entry>
+  <Entry IsArray="false" ValueType="Text" Encrypted="True" Group="Certificate">server.ssl.key-store-password</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">kerberos.servicePrincipal</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">kerberos.keytabLocation</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.url</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">kerberos.dummyUser</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.user</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.password</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.userSearchBase</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.groupSearchBase</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.auftragberechtigendeGruppen</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Active Directory">ldap.sccmoperatorenGruppen</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Database">dploy.database.name</Entry>
+  <Entry IsArray="false" ValueType="Jdbc" Group="Database">dploy.datasource.url</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Database">dploy.datasource.driverClassName</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Database">dploy.jpa.properties.hibernate.dialect</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Database">dploy.jpa.properties.hibernate.hbm2ddl.auto</Entry>
+  <Entry IsArray="false" ValueType="Boolean" Group="Database">dploy.jpa.properties.hibernate.show_sql</Entry>
+  <Entry IsArray="false" ValueType="Jdbc" Group="Software-CMDB">softwarecmdb.datasource.url</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Software-CMDB">softwarecmdb.datasource.username</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Software-CMDB">softwarecmdb.datasource.password</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Software-CMDB">softwarecmdb.datasource.driverClassName</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Software-CMDB">softwarecmdb.jpa.properties.hibernate.dialect</Entry>
+  <Entry IsArray="false" ValueType="Jdbc" Group="ITSM">cmdb.datasource.url</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="ITSM">cmdb.datasource.driverClassName</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="ITSM">cmdb.jpa.properties.hibernate.dialect</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="ITSM">cmdb.schemaname</Entry>
+  <Entry IsArray="false" ValueType="Boolean" Group="Logging">log.database.enable</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="Logging">log.database.name</Entry>
+  <Entry IsArray="false" ValueType="Jdbc" Group="Logging">log.database.jdbc</Entry>
+  <Entry IsArray="false" ValueType="Number" Group="Server">auftragsausfuehrung.scheduled-fixedDelay-in-seconds</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="SCCM-API">sccmtools.ssl-trust-store</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="SCCM-API">sccmtools.ssl-trust-store-password</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="SCCM-API">sccmtools.benutzer</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="SCCM-API">sccmtools.passwort</Entry>
+  <Entry IsArray="false" ValueType="Text" Group="SCCM-API">sccmtools.dienst_url</Entry>
+</ApplicationPropertiesSchema>

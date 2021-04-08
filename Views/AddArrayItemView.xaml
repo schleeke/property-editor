@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ApplicationProperties.Views.AddArrayItemView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ApplicationProperties.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:viewmodels="clr-namespace:ApplicationProperties.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:AddArrayItemViewModel}"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d">
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="Window">
+            <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterOwner" />
+            <Setter Property="ResizeMode" Value="NoResize"/>
+            <Setter Property="ShowInTaskbar" Value="False"/>
+            <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+        </Style>
+    </prism:Dialog.WindowStyle>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Right"
+               FontWeight="SemiBold"
+               VerticalAlignment="Center"
+               Content="New value:">
+            <Label.Foreground>
+                <SolidColorBrush Color="{StaticResource {x:Static SystemColors.GrayTextColorKey}}"/>
+            </Label.Foreground>
+        </Label>
+        <TextBox x:Name="ItemText" Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="4"
+                 Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                 Width="256"
+                 Padding="4" TabIndex="0"/>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal"
+                    Grid.ColumnSpan="2">
+
+            <Button Width="100"
+                    Margin="4"
+                    Command="{Binding Path=SaveCommand, UpdateSourceTrigger=PropertyChanged}"
+                    Padding="4" TabIndex="1" IsDefault="True">Save</Button>
+            <Button Width="100"
+                    Margin="4"
+                    Command="{Binding Path=CancelCommad}"
+                    Padding="4" TabIndex="2" IsCancel="True">Cancel</Button>
+            
+        </StackPanel>
+
+    </Grid>
+</UserControl>
