@@ -64,7 +64,7 @@
                                FontWeight="SemiBold"/>
                 </Label>
                 <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">
-                    <TextBlock Text="Create backup on save::"
+                    <TextBlock Text="Create backup on save:"
                                HorizontalAlignment="Right"
                                FontWeight="SemiBold"/>
                 </Label>

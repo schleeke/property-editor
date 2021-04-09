@@ -15,10 +15,6 @@
         Height="768"
         Width="1024" WindowStartupLocation="CenterScreen">
     <DockPanel LastChildFill="True">
-
-        <!-- Menu -->
-        <local:MainMenuView DockPanel.Dock="Top" Padding="2"/>
-
         <!-- Toolbar -->
         <local:MainToolbarView DockPanel.Dock="Top"/>
 

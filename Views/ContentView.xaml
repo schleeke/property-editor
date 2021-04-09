@@ -122,7 +122,22 @@
                                                             ToolTip="Remove item">
                                                     <Button.Template>
                                                         <ControlTemplate>
-                                                            <Image Height="12" Width="12" Source="/ApplicationProperties;component/Resources/No-01-16.png"/>
+                                                            <Path Data="M7.1999998,0L16,8.7999997 24.799999,0 32,7.1999998 23.2,16 32,24.799999 24.799999,32 16,23.2 7.1999998,32 0,24.799999 8.7999997,16 0,7.1999998z"
+                                                                  Stretch="Uniform"
+                                                                  Fill="#FF000000"
+                                                                  Width="14"
+                                                                  Height="14"
+                                                                  RenderTransformOrigin="0.5,0.5">
+                                                                <Path.RenderTransform>
+                                                                    <TransformGroup>
+                                                                        <TransformGroup.Children>
+                                                                            <RotateTransform Angle="0" />
+                                                                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                                                                        </TransformGroup.Children>
+                                                                    </TransformGroup>
+                                                                </Path.RenderTransform>
+                                                            </Path>
+
                                                         </ControlTemplate>
                                                     </Button.Template>
                                                 </Button>
@@ -149,7 +164,7 @@
                                 </Button.Style>
                                 <Button.Template>
                                     <ControlTemplate>
-                                        <Image Width="24" Source="/ApplicationProperties;component/Resources/Circle-Add-04-48.png"/>
+                                        <ContentControl Content="{StaticResource AddIcon}" Margin="0" Width="24" Height="24"/>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>

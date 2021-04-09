@@ -205,6 +205,10 @@
     <Resource Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AboutView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -239,55 +243,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Data-Export-24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Data-Export-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Save-01-24.png" />
-    <Resource Include="Resources\Save-01-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Settings-02-24.png" />
-    <Resource Include="Resources\Settings-02-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Help-02-24.png" />
-    <Resource Include="Resources\Help-02-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\CircleClose-02-24.png" />
-    <Resource Include="Resources\CircleClose-02-48.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="dPloy.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Lock-24.png" />
-    <Resource Include="Resources\Lock-48.png" />
-    <Resource Include="Resources\Lock-Open-24.png" />
-    <Resource Include="Resources\Lock-Open-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\BookMarks-16.png" />
-    <Resource Include="Resources\BookMarks-24.png" />
-    <Resource Include="Resources\BookMarks-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\No-01-16.png" />
-    <Resource Include="Resources\No-01-24.png" />
-    <Resource Include="Resources\No-01-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Password-Text-01-24.png" />
-    <Resource Include="Resources\Password-Text-01-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Circle-Add-04-24.png" />
-    <Resource Include="Resources\Circle-Add-04-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,131 +10,60 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
     <Menu DockPanel.Dock="Top" Padding="2" Background="{x:Null}">
+        <Menu.Resources>
+            <Style TargetType="ContentControl">
+                <Style.Triggers>
+                    <Trigger Property="IsEnabled" Value="False">
+                        <Setter Property="Opacity" Value="0.5" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Menu.Resources>
         <MenuItem Header="_File">
             <MenuItem Header="_Load..." Command="{Binding Path=LoadFileCommand}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Data-Export-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource OpenFileIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="_Save" Command="{Binding Path=SaveFileCommand, UpdateSourceTrigger=PropertyChanged}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Save-01-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource SaveIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
             <Separator/>
             <MenuItem Header="E_xit" ToolTip="Exit application" Command="{Binding Path=ExitApplicationCommand}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/CircleClose-02-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource ExitIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
         </MenuItem>
         <MenuItem Header="_Edit">
             <MenuItem Header="Encrypt value..." Command="{Binding Path=EncryptValueCommand, UpdateSourceTrigger=PropertyChanged}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Lock-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource EncryptIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="Decrypt value..." Command="{Binding Path=DecryptValueCommand, UpdateSourceTrigger=PropertyChanged}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Lock-Open-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource DecryptIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="Set crypto password..." Command="{Binding Path=SetPasswordCommand}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Password-Text-01-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource PasswordIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
             <Separator/>
             <MenuItem Header="_Preferences..." ToolTip="Show preferences dialog..." Command="{Binding Path=ShowPreferencesCommand}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Settings-02-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource SettingsIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
         </MenuItem>
         <MenuItem Header="_Help">
             <MenuItem Header="A_bout..." Command="{Binding Path=ShowAboutDialogCommand}">
                 <MenuItem.Icon>
-                    <Image Width="16" Height="16" Source="/ApplicationProperties;component/Resources/Help-02-24.png">
-                        <Image.Style>
-                            <Style TargetType="Image">
-                                <Style.Triggers>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter Property="Opacity" Value="0.5" />
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Image.Style>
-                    </Image>
+                    <ContentControl Content="{StaticResource HelpIcon}" Margin="0"/>
                 </MenuItem.Icon>
             </MenuItem>
         </MenuItem>

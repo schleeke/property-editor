@@ -11,7 +11,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <ToolBarPanel Orientation="Horizontal">
         <ToolBarPanel.Resources>
-            <Style TargetType="Image">
+            <Style TargetType="ContentControl">
                 <Style.Triggers>
                     <Trigger Property="IsEnabled" Value="False">
                         <Setter Property="Opacity" Value="0.5" />
@@ -20,20 +20,20 @@
             </Style>
         </ToolBarPanel.Resources>
         <ToolBar ToolBarTray.IsLocked="True" Height="38" Background="{x:Null}" Loaded="ToolBar_Loaded">
-            <Button ToolTip="Load file..." Command="{Binding Path=LoadFileCommand}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Data-Export-48.png"/>
+            <Button ToolTip="Load file..." Command="{Binding Path=LoadFileCommand}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource OpenFileIcon}"/>
             </Button>
-            <Button ToolTip="Save changes" Command="{Binding Path=SaveFileCommand, UpdateSourceTrigger=PropertyChanged}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Save-01-48.png"/>
+            <Button ToolTip="Save changes" Command="{Binding Path=SaveFileCommand, UpdateSourceTrigger=PropertyChanged}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource SaveIcon}"/>
             </Button>
             <Separator/>
-            <Button ToolTip="Exit application" Command="{Binding Path=ExitApplicationCommand}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/CircleClose-02-48.png"/>
+            <Button ToolTip="Exit application" Command="{Binding Path=ExitApplicationCommand}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource ExitIcon}"/>
             </Button>
         </ToolBar>
         <ToolBar ToolBarTray.IsLocked="True" Height="38" Background="{x:Null}" Loaded="ToolBar_Loaded">
-            <Button ToolTip="Show preferences dialog..." Command="{Binding Path=ShowPreferencesCommand}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Settings-02-48.png"/>
+            <Button ToolTip="Show preferences dialog..." Command="{Binding Path=ShowPreferencesCommand}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource SettingsIcon}"/>
             </Button>
         </ToolBar>
         <ToolBar ToolBarTray.IsLocked="True" Height="38" Background="{x:Null}" Loaded="ToolBar_Loaded">
@@ -46,19 +46,19 @@
                     </Style.Triggers>
                 </Style>
             </ToolBar.Style>
-            <Button ToolTip="Encrypt value..." Command="{Binding Path=EncryptValueCommand, UpdateSourceTrigger=PropertyChanged}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Lock-48.png"/>
+            <Button ToolTip="Encrypt value..." Command="{Binding Path=EncryptValueCommand, UpdateSourceTrigger=PropertyChanged}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource EncryptIcon}"/>
             </Button>
-            <Button ToolTip="Decrypt value..." Command="{Binding Path=DecryptValueCommand, UpdateSourceTrigger=PropertyChanged}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Lock-Open-48.png"/>
+            <Button ToolTip="Decrypt value..." Command="{Binding Path=DecryptValueCommand, UpdateSourceTrigger=PropertyChanged}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource DecryptIcon}"/>
             </Button>
-            <Button ToolTip="Set crypto password..." Command="{Binding Path=SetPasswordCommand}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Password-Text-01-48.png"/>
+            <Button ToolTip="Set crypto password..." Command="{Binding Path=SetPasswordCommand}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource PasswordIcon}"/>
             </Button>
         </ToolBar>
         <ToolBar ToolBarTray.IsLocked="True" Height="38" Background="{x:Null}" Loaded="ToolBar_Loaded">
-            <Button ToolTip="About..." Command="{Binding Path=ShowAboutDialogCommand}">
-                <Image Height="24" Width="24" Source="/ApplicationProperties;component/Resources/Help-02-48.png"/>
+            <Button ToolTip="About..." Command="{Binding Path=ShowAboutDialogCommand}" Padding="4">
+                <ContentControl Margin="0" Content="{StaticResource HelpIcon}"/>
             </Button>
         </ToolBar>
     </ToolBarPanel>

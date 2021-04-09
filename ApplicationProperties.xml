@@ -974,6 +974,16 @@
         <member name="M:ApplicationProperties.ViewModels.AboutViewModel.OnDialogClosed">
             <inheritdoc/>
         </member>
+        <member name="P:ApplicationProperties.ViewModels.AboutViewModel.ProductName">
+            <summary>
+            The name of the application.
+            </summary>
+        </member>
+        <member name="P:ApplicationProperties.ViewModels.AboutViewModel.Version">
+            <summary>
+            The version of the application.
+            </summary>
+        </member>
         <member name="M:ApplicationProperties.ViewModels.AboutViewModel.OnDialogOpened(Prism.Services.Dialogs.IDialogParameters)">
             <inheritdoc/>
         </member>

@@ -5,6 +5,10 @@
              Startup="PrismApplication_Startup"
              xmlns:prism="http://prismlibrary.com/">
     <prism:PrismApplication.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="IconsDictionary" Source="icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </prism:PrismApplication.Resources>
 </prism:PrismApplication>
